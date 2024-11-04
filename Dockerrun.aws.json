@@ -1,0 +1,24 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "Testestefanini",
+      "image": "Testestefanini:latest", 
+      "essential": true,
+      "memory": 512, 
+      "cpu": 256, 
+      "portMappings": [
+        {
+          "hostPort": 8080, // Porta no host
+          "containerPort": 8080 // Porta no cont�iner
+        }
+      ],
+      "environment": [
+        {
+          "name": "ASPNETCORE_ENVIRONMENT",
+          "value": "Production" 
+        }
+      ]
+    }
+  ]
+}
